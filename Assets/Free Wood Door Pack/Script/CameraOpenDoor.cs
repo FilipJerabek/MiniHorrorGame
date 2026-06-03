@@ -17,14 +17,11 @@ public class CameraOpenDoor : MonoBehaviour
 
             FlashlightPickUp baterka = hit.transform.GetComponent<FlashlightPickUp>();
 
-            //dveře/baterka
             if (door != null || baterka != null)
             {
-                //if (text != null) text.SetActive(true);   --nastavit později
-
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    
+
                     if (door != null)
                     {
                         door.OpenDoor();
@@ -35,14 +32,6 @@ public class CameraOpenDoor : MonoBehaviour
                     }
                 }
             }
-            else
-            {
-               // if (text != null) text.SetActive(false); --později
-            }
-        }
-        else
-        {
-            //if (text != null) text.SetActive(false); --později
         }
     }
 }

@@ -5,7 +5,6 @@ public class FlashlightPickUp : MonoBehaviour
 
     public GameObject baterkaVRuce;
 
-
     public void PickUp()
     {
         if (baterkaVRuce != null)

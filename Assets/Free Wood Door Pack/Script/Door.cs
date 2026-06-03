@@ -10,6 +10,7 @@ public class Door : MonoBehaviour
     float DoorOpenAngle = -90.0f;
     private Quaternion closedRotation;
     private Quaternion openedRotation;
+    public bool jeZamceno = false;
 
 
     public AudioSource asource;
@@ -41,7 +42,11 @@ public class Door : MonoBehaviour
 
     public void OpenDoor()
     {
-        Debug.Log("Někdo na mě sáhnul!");
+        if (jeZamceno)
+        {
+            Debug.Log("Zavřeno! Kliku nelze stisknout.");
+            return; 
+        }
         open = !open;
         if (asource != null)
         {
@@ -51,4 +56,21 @@ public class Door : MonoBehaviour
 
 
     }
+
+    public void ZabouchniAZamkni()
+    {
+        jeZamceno = true; 
+        if (open)
+        {
+            open = false; 
+
+            if (asource != null && closeDoor != null)
+            {
+                asource.clip = closeDoor;
+                asource.Play();
+            }
+        }
+    }
+
+
 }

@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/HlavniMenu.unity
+    guid: b72858c538d01064e963946cb6c7fabb
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Level3.unity
+    guid: 89e6bc4e2c53e4749b182327759b787b
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 11b4f2df37582e9459383e85293cac85
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
